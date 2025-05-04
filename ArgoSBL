@@ -4,7 +4,7 @@ echo "L哥Github项目  ：github.com/yonggekkk"
 echo "
 L哥Blogger博客 ：ygkkk.blogspot.com"
 echo "
-Y哥YouTube频道 ：www.youtube.com/@ygkkk"
+L哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "ArgoSB真一键无交互脚本"
 echo "当前版本：25.4.28 测试beta5版"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -66,7 +66,7 @@ rm -rf /etc/s-box-ag /usr/bin/agsb
 }
 up(){
 rm -rf /usr/bin/agsb
-curl -L -o /usr/bin/agsb -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh
+curl -L -o /usr/bin/agsb -# --retry 2 --insecure https://raw.githubusercontent.com/HELONM/firefox-tv/refs/heads/master/ArgoSBL
 chmod +x /usr/bin/agsb
 }
 if [[ "$1" == "del" ]]; then
