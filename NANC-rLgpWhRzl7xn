@@ -1,0 +1,969 @@
+---
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://doh.dns.sb/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+proxies:
+- name: "⁉️连不上，切下节点。有时需激活线路链路 或 ⟳刷新订阅 换套餐要刷新新节点 - ❌勿选"
+  type: vmess
+  server: hello3.orz.my.id
+  port: 51490
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ 1 ⟨New-新年付线⟩"
+  type: vmess
+  server: hk001.ness-ann-line.my.id
+  port: 51710
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ 2 ⟨New-新年付线⟩"
+  type: vmess
+  server: hk002.ness-ann-line.my.id
+  port: 51720
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ A  ⟨CMI年付专用⟩"
+  type: vmess
+  server: hk-an1.ness-ann-line.my.id
+  port: 51060
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ B  ⟨CMI年付专用⟩"
+  type: vmess
+  server: hk-an2.ness-ann-line.my.id
+  port: 51060
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ C  ⟨CMI年付专用⟩"
+  type: vmess
+  server: hk-an3.ness-ann-line.my.id
+  port: 51060
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ D  ⟨CMI年付专用⟩"
+  type: vmess
+  server: hk-an5.ness-ann-line.my.id
+  port: 51070
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ E  ⟨CMI年付专用⟩"
+  type: vmess
+  server: hk-an5.ness-ann-line.my.id
+  port: 51070
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港 ▸ F  ⟨CMI年付专用⟩"
+  type: vmess
+  server: hk-an5.ness-ann-line.my.id
+  port: 51070
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1F9\U0001F1FC 台湾 ▸  ⟨家宽|原生VIP⟩"
+  type: vmess
+  server: tw1.ness-ann-line.my.id
+  port: 51240
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1F8\U0001F1EC 新加破 ▸ A ⟨SVIP⟩"
+  type: vmess
+  server: sg1.ness-ann-line.my.id
+  port: 51250
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加破 ▸ B ⟨SVIP⟩"
+  type: vmess
+  server: sg2.ness-ann-line.my.id
+  port: 51260
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加破 ▸ D ⟨SVIP⟩"
+  type: vmess
+  server: sg4.ness-ann-line.my.id
+  port: 51280
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本/东京 ▸ A ⟨SVIP⟩"
+  type: vmess
+  server: jp1.ness-ann-line.my.id
+  port: 51290
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本/东京 ▸ B ⟨SVIP⟩"
+  type: vmess
+  server: jp2.ness-ann-line.my.id
+  port: 51300
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本/东京 ▸ C ⟨高速|全解⟩"
+  type: vmess
+  server: jp3.ness-ann-line.my.id
+  port: 51310
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本/大阪 ▸ D ⟨SVP⟩"
+  type: vmess
+  server: jp4.ness-ann-line.my.id
+  port: 51320
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本/东京 ▸ E ⟨VIP⟩"
+  type: vmess
+  server: jp5.ness-ann-line.my.id
+  port: 51330
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本/东京 ▸ F  ⟨SVIP⟩"
+  type: vmess
+  server: jp6.ness-ann-line.my.id
+  port: 51340
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国 ▸ A ⟨SVIP⟩"
+  type: vmess
+  server: kr1.ness-ann-line.my.id
+  port: 51350
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1F9\U0001F1ED 泰国 ▸ A ⟨SVIP⟩"
+  type: vmess
+  server: th1.ness-ann-line.my.id
+  port: 51360
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ A ⟨SVIP⟩"
+  type: vmess
+  server: us1.ness-ann-line.my.id
+  port: 51370
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ B ⟨SVIP⟩"
+  type: vmess
+  server: us2.ness-ann-line.my.id
+  port: 51380
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国/Las Vegas ▸ C ⟨SVIP⟩"
+  type: vmess
+  server: us3.ness-ann-line.my.id
+  port: 51390
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国/拉斯维加斯 ▸ D ⟨SVIP⟩"
+  type: vmess
+  server: us4.ness-ann-line.my.id
+  port: 51400
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国 ▸ 1 ⟨专业线ChatGPT体验⟩"
+  type: vmess
+  server: us5.ness-ann-line.my.id
+  port: 51410
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1E6\U0001F1FA 澳洲 ▸ ⟨VIP⟩"
+  type: vmess
+  server: au1.ness-ann-line.my.id
+  port: 51460
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ SVIP ⟨高速欧洲⟩"
+  type: vmess
+  server: de1.ness-ann-line.my.id
+  port: 51480
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ 1 ⟨ChatGPT SVIP⟩"
+  type: vmess
+  server: de2.ness-ann-line.my.id
+  port: 51470
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1EC\U0001F1E7 英国 ▸ 2 ⟨ChatGPT SVIP ⟩"
+  type: vmess
+  server: uk2.ness-ann-line.my.id
+  port: 51500
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1EC\U0001F1E7 英国 ▸ 1 ⟨ChatGPT SVIP⟩"
+  type: vmess
+  server: uk1.ness-ann-line.my.id
+  port: 51490
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1F3\U0001F1F1 荷兰 ▸ C ⟨ ChatGPT SVIP ⟩"
+  type: ss
+  server: nl3.ness-ann-line.my.id
+  port: 51540
+  cipher: chacha20-ietf-poly1305
+  password: 105bd128-808e-4099-b5b7-69f51327869c
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 荷兰 ▸ B ⟨ ChatGPT SVIP ⟩"
+  type: vmess
+  server: nl2.ness-ann-line.my.id
+  port: 51530
+  uuid: 105bd128-808e-4099-b5b7-69f51327869c
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 荷兰 ▸ A ⟨ ChatGPT SVIP⟩"
+  type: ss
+  server: nl1.ness-ann-line.my.id
+  port: 51520
+  cipher: chacha20-ietf-poly1305
+  password: 105bd128-808e-4099-b5b7-69f51327869c
+  udp: true
+- name: "\U0001F1F7\U0001F1FA 俄国 ▸1  ⟨\U0001F5FC边缘节点 Lite⟩"
+  type: ss
+  server: ru1.ness-pro-line.my.id
+  port: 51550
+  cipher: chacha20-ietf-poly1305
+  password: 105bd128-808e-4099-b5b7-69f51327869c
+  udp: true
+- name: "\U0001F1F9\U0001F1F7 土耳其 ▸ 1 ⟨\U0001F5FC边缘节点 | NF⟩"
+  type: ss
+  server: tr1.ness-ann-line.my.id
+  port: 51570
+  cipher: chacha20-ietf-poly1305
+  password: 105bd128-808e-4099-b5b7-69f51327869c
+  udp: true
+- name: "\U0001F1FF\U0001F1E6 南非 ▸ 1  ⟨\U0001F5FC边缘节点⟩"
+  type: ss
+  server: za1.ness-pro-line.my.id
+  port: 51620
+  cipher: chacha20-ietf-poly1305
+  password: 105bd128-808e-4099-b5b7-69f51327869c
+  udp: true
+proxy-groups:
+- name: NessByte
+  type: select
+  proxies:
+  - 自动选择
+  - 故障转移
+  - "⁉️连不上，切下节点。有时需激活线路链路 或 ⟳刷新订阅 换套餐要刷新新节点 - ❌勿选"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ 1 ⟨New-新年付线⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ 2 ⟨New-新年付线⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ A  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ B  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ C  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ D  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ E  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ F  ⟨CMI年付专用⟩"
+  - "\U0001F1F9\U0001F1FC 台湾 ▸  ⟨家宽|原生VIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ A ⟨SVIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ B ⟨SVIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ D ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ A ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ B ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ C ⟨高速|全解⟩"
+  - "\U0001F1EF\U0001F1F5 日本/大阪 ▸ D ⟨SVP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ E ⟨VIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ F  ⟨SVIP⟩"
+  - "\U0001F1F0\U0001F1F7 韩国 ▸ A ⟨SVIP⟩"
+  - "\U0001F1F9\U0001F1ED 泰国 ▸ A ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ A ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ B ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/Las Vegas ▸ C ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/拉斯维加斯 ▸ D ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国 ▸ 1 ⟨专业线ChatGPT体验⟩"
+  - "\U0001F1E6\U0001F1FA 澳洲 ▸ ⟨VIP⟩"
+  - "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ SVIP ⟨高速欧洲⟩"
+  - "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ 1 ⟨ChatGPT SVIP⟩"
+  - "\U0001F1EC\U0001F1E7 英国 ▸ 2 ⟨ChatGPT SVIP ⟩"
+  - "\U0001F1EC\U0001F1E7 英国 ▸ 1 ⟨ChatGPT SVIP⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ C ⟨ ChatGPT SVIP ⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ B ⟨ ChatGPT SVIP ⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ A ⟨ ChatGPT SVIP⟩"
+  - "\U0001F1F7\U0001F1FA 俄国 ▸1  ⟨\U0001F5FC边缘节点 Lite⟩"
+  - "\U0001F1F9\U0001F1F7 土耳其 ▸ 1 ⟨\U0001F5FC边缘节点 | NF⟩"
+  - "\U0001F1FF\U0001F1E6 南非 ▸ 1  ⟨\U0001F5FC边缘节点⟩"
+- name: 自动选择
+  type: url-test
+  proxies:
+  - "⁉️连不上，切下节点。有时需激活线路链路 或 ⟳刷新订阅 换套餐要刷新新节点 - ❌勿选"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ 1 ⟨New-新年付线⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ 2 ⟨New-新年付线⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ A  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ B  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ C  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ D  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ E  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ F  ⟨CMI年付专用⟩"
+  - "\U0001F1F9\U0001F1FC 台湾 ▸  ⟨家宽|原生VIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ A ⟨SVIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ B ⟨SVIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ D ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ A ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ B ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ C ⟨高速|全解⟩"
+  - "\U0001F1EF\U0001F1F5 日本/大阪 ▸ D ⟨SVP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ E ⟨VIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ F  ⟨SVIP⟩"
+  - "\U0001F1F0\U0001F1F7 韩国 ▸ A ⟨SVIP⟩"
+  - "\U0001F1F9\U0001F1ED 泰国 ▸ A ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ A ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ B ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/Las Vegas ▸ C ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/拉斯维加斯 ▸ D ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国 ▸ 1 ⟨专业线ChatGPT体验⟩"
+  - "\U0001F1E6\U0001F1FA 澳洲 ▸ ⟨VIP⟩"
+  - "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ SVIP ⟨高速欧洲⟩"
+  - "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ 1 ⟨ChatGPT SVIP⟩"
+  - "\U0001F1EC\U0001F1E7 英国 ▸ 2 ⟨ChatGPT SVIP ⟩"
+  - "\U0001F1EC\U0001F1E7 英国 ▸ 1 ⟨ChatGPT SVIP⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ C ⟨ ChatGPT SVIP ⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ B ⟨ ChatGPT SVIP ⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ A ⟨ ChatGPT SVIP⟩"
+  - "\U0001F1F7\U0001F1FA 俄国 ▸1  ⟨\U0001F5FC边缘节点 Lite⟩"
+  - "\U0001F1F9\U0001F1F7 土耳其 ▸ 1 ⟨\U0001F5FC边缘节点 | NF⟩"
+  - "\U0001F1FF\U0001F1E6 南非 ▸ 1  ⟨\U0001F5FC边缘节点⟩"
+  url: http://www.gstatic.com/generate_204
+  interval: '86400'
+- name: 故障转移
+  type: fallback
+  proxies:
+  - "⁉️连不上，切下节点。有时需激活线路链路 或 ⟳刷新订阅 换套餐要刷新新节点 - ❌勿选"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ 1 ⟨New-新年付线⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ 2 ⟨New-新年付线⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ A  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ B  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ C  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ D  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ E  ⟨CMI年付专用⟩"
+  - "\U0001F1ED\U0001F1F0 香港 ▸ F  ⟨CMI年付专用⟩"
+  - "\U0001F1F9\U0001F1FC 台湾 ▸  ⟨家宽|原生VIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ A ⟨SVIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ B ⟨SVIP⟩"
+  - "\U0001F1F8\U0001F1EC 新加破 ▸ D ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ A ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ B ⟨SVIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ C ⟨高速|全解⟩"
+  - "\U0001F1EF\U0001F1F5 日本/大阪 ▸ D ⟨SVP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ E ⟨VIP⟩"
+  - "\U0001F1EF\U0001F1F5 日本/东京 ▸ F  ⟨SVIP⟩"
+  - "\U0001F1F0\U0001F1F7 韩国 ▸ A ⟨SVIP⟩"
+  - "\U0001F1F9\U0001F1ED 泰国 ▸ A ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ A ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/洛杉矶 ▸ B ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/Las Vegas ▸ C ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国/拉斯维加斯 ▸ D ⟨SVIP⟩"
+  - "\U0001F1FA\U0001F1F8 美国 ▸ 1 ⟨专业线ChatGPT体验⟩"
+  - "\U0001F1E6\U0001F1FA 澳洲 ▸ ⟨VIP⟩"
+  - "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ SVIP ⟨高速欧洲⟩"
+  - "\U0001F1E9\U0001F1EA 德国/法兰克福 ▸ 1 ⟨ChatGPT SVIP⟩"
+  - "\U0001F1EC\U0001F1E7 英国 ▸ 2 ⟨ChatGPT SVIP ⟩"
+  - "\U0001F1EC\U0001F1E7 英国 ▸ 1 ⟨ChatGPT SVIP⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ C ⟨ ChatGPT SVIP ⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ B ⟨ ChatGPT SVIP ⟩"
+  - "\U0001F1F3\U0001F1F1 荷兰 ▸ A ⟨ ChatGPT SVIP⟩"
+  - "\U0001F1F7\U0001F1FA 俄国 ▸1  ⟨\U0001F5FC边缘节点 Lite⟩"
+  - "\U0001F1F9\U0001F1F7 土耳其 ▸ 1 ⟨\U0001F5FC边缘节点 | NF⟩"
+  - "\U0001F1FF\U0001F1E6 南非 ▸ 1  ⟨\U0001F5FC边缘节点⟩"
+  url: http://www.gstatic.com/generate_204
+  interval: '7200'
+rules:
+- DOMAIN,47.100.192.143,DIRECT
+- DOMAIN-SUFFIX,services.googleapis.cn,NessByte
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,NessByte
+- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
+- DOMAIN,developer.apple.com,NessByte
+- DOMAIN-SUFFIX,digicert.com,NessByte
+- DOMAIN,ocsp.apple.com,NessByte
+- DOMAIN,ocsp.comodoca.com,NessByte
+- DOMAIN,ocsp.usertrust.com,NessByte
+- DOMAIN,ocsp.sectigo.com,NessByte
+- DOMAIN,ocsp.verisign.net,NessByte
+- DOMAIN-SUFFIX,apple-dns.net,NessByte
+- DOMAIN,testflight.apple.com,NessByte
+- DOMAIN,sandbox.itunes.apple.com,NessByte
+- DOMAIN,itunes.apple.com,NessByte
+- DOMAIN-SUFFIX,apps.apple.com,NessByte
+- DOMAIN-SUFFIX,blobstore.apple.com,NessByte
+- DOMAIN,cvws.icloud-content.com,NessByte
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn20.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+- DOMAIN-SUFFIX,edgekey.net,DIRECT
+- DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+- DOMAIN-SUFFIX,mwcname.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,bilivideo.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,licdn.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rarbg.to,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,snapdrop.net,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tencent.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tianyancha.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+- DOMAIN-SUFFIX,zoho.com,DIRECT
+- DOMAIN-KEYWORD,amazon,NessByte
+- DOMAIN-KEYWORD,google,NessByte
+- DOMAIN-KEYWORD,gmail,NessByte
+- DOMAIN-KEYWORD,youtube,NessByte
+- DOMAIN-KEYWORD,facebook,NessByte
+- DOMAIN-SUFFIX,fb.me,NessByte
+- DOMAIN-SUFFIX,fbcdn.net,NessByte
+- DOMAIN-KEYWORD,twitter,NessByte
+- DOMAIN-KEYWORD,instagram,NessByte
+- DOMAIN-KEYWORD,dropbox,NessByte
+- DOMAIN-SUFFIX,twimg.com,NessByte
+- DOMAIN-KEYWORD,blogspot,NessByte
+- DOMAIN-SUFFIX,youtu.be,NessByte
+- DOMAIN-KEYWORD,whatsapp,NessByte
+- DOMAIN-KEYWORD,admarvel,REJECT
+- DOMAIN-KEYWORD,admaster,REJECT
+- DOMAIN-KEYWORD,adsage,REJECT
+- DOMAIN-KEYWORD,adsmogo,REJECT
+- DOMAIN-KEYWORD,adsrvmedia,REJECT
+- DOMAIN-KEYWORD,adwords,REJECT
+- DOMAIN-KEYWORD,adservice,REJECT
+- DOMAIN-SUFFIX,appsflyer.com,REJECT
+- DOMAIN-KEYWORD,domob,REJECT
+- DOMAIN-SUFFIX,doubleclick.net,REJECT
+- DOMAIN-KEYWORD,duomeng,REJECT
+- DOMAIN-KEYWORD,dwtrack,REJECT
+- DOMAIN-KEYWORD,guanggao,REJECT
+- DOMAIN-KEYWORD,lianmeng,REJECT
+- DOMAIN-SUFFIX,mmstat.com,REJECT
+- DOMAIN-KEYWORD,mopub,REJECT
+- DOMAIN-KEYWORD,omgmta,REJECT
+- DOMAIN-KEYWORD,openx,REJECT
+- DOMAIN-KEYWORD,partnerad,REJECT
+- DOMAIN-KEYWORD,pingfore,REJECT
+- DOMAIN-KEYWORD,supersonicads,REJECT
+- DOMAIN-KEYWORD,uedas,REJECT
+- DOMAIN-KEYWORD,umeng,REJECT
+- DOMAIN-KEYWORD,usage,REJECT
+- DOMAIN-SUFFIX,vungle.com,REJECT
+- DOMAIN-KEYWORD,wlmonitor,REJECT
+- DOMAIN-KEYWORD,zjtoolbar,REJECT
+- DOMAIN-SUFFIX,9to5mac.com,NessByte
+- DOMAIN-SUFFIX,abpchina.org,NessByte
+- DOMAIN-SUFFIX,adblockplus.org,NessByte
+- DOMAIN-SUFFIX,adobe.com,NessByte
+- DOMAIN-SUFFIX,akamaized.net,NessByte
+- DOMAIN-SUFFIX,alfredapp.com,NessByte
+- DOMAIN-SUFFIX,amplitude.com,NessByte
+- DOMAIN-SUFFIX,ampproject.org,NessByte
+- DOMAIN-SUFFIX,android.com,NessByte
+- DOMAIN-SUFFIX,angularjs.org,NessByte
+- DOMAIN-SUFFIX,aolcdn.com,NessByte
+- DOMAIN-SUFFIX,apkpure.com,NessByte
+- DOMAIN-SUFFIX,appledaily.com,NessByte
+- DOMAIN-SUFFIX,appshopper.com,NessByte
+- DOMAIN-SUFFIX,appspot.com,NessByte
+- DOMAIN-SUFFIX,arcgis.com,NessByte
+- DOMAIN-SUFFIX,archive.org,NessByte
+- DOMAIN-SUFFIX,armorgames.com,NessByte
+- DOMAIN-SUFFIX,aspnetcdn.com,NessByte
+- DOMAIN-SUFFIX,att.com,NessByte
+- DOMAIN-SUFFIX,awsstatic.com,NessByte
+- DOMAIN-SUFFIX,azureedge.net,NessByte
+- DOMAIN-SUFFIX,azurewebsites.net,NessByte
+- DOMAIN-SUFFIX,bing.com,NessByte
+- DOMAIN-SUFFIX,bintray.com,NessByte
+- DOMAIN-SUFFIX,bit.com,NessByte
+- DOMAIN-SUFFIX,bit.ly,NessByte
+- DOMAIN-SUFFIX,bitbucket.org,NessByte
+- DOMAIN-SUFFIX,bjango.com,NessByte
+- DOMAIN-SUFFIX,bkrtx.com,NessByte
+- DOMAIN-SUFFIX,blog.com,NessByte
+- DOMAIN-SUFFIX,blogcdn.com,NessByte
+- DOMAIN-SUFFIX,blogger.com,NessByte
+- DOMAIN-SUFFIX,blogsmithmedia.com,NessByte
+- DOMAIN-SUFFIX,blogspot.com,NessByte
+- DOMAIN-SUFFIX,blogspot.hk,NessByte
+- DOMAIN-SUFFIX,bloomberg.com,NessByte
+- DOMAIN-SUFFIX,box.com,NessByte
+- DOMAIN-SUFFIX,box.net,NessByte
+- DOMAIN-SUFFIX,cachefly.net,NessByte
+- DOMAIN-SUFFIX,chromium.org,NessByte
+- DOMAIN-SUFFIX,cl.ly,NessByte
+- DOMAIN-SUFFIX,cloudflare.com,NessByte
+- DOMAIN-SUFFIX,cloudfront.net,NessByte
+- DOMAIN-SUFFIX,cloudmagic.com,NessByte
+- DOMAIN-SUFFIX,cmail19.com,NessByte
+- DOMAIN-SUFFIX,cnet.com,NessByte
+- DOMAIN-SUFFIX,cocoapods.org,NessByte
+- DOMAIN-SUFFIX,comodoca.com,NessByte
+- DOMAIN-SUFFIX,crashlytics.com,NessByte
+- DOMAIN-SUFFIX,culturedcode.com,NessByte
+- DOMAIN-SUFFIX,d.pr,NessByte
+- DOMAIN-SUFFIX,danilo.to,NessByte
+- DOMAIN-SUFFIX,dayone.me,NessByte
+- DOMAIN-SUFFIX,db.tt,NessByte
+- DOMAIN-SUFFIX,deskconnect.com,NessByte
+- DOMAIN-SUFFIX,disq.us,NessByte
+- DOMAIN-SUFFIX,disqus.com,NessByte
+- DOMAIN-SUFFIX,disquscdn.com,NessByte
+- DOMAIN-SUFFIX,dnsimple.com,NessByte
+- DOMAIN-SUFFIX,docker.com,NessByte
+- DOMAIN-SUFFIX,dribbble.com,NessByte
+- DOMAIN-SUFFIX,droplr.com,NessByte
+- DOMAIN-SUFFIX,duckduckgo.com,NessByte
+- DOMAIN-SUFFIX,dueapp.com,NessByte
+- DOMAIN-SUFFIX,dytt8.net,NessByte
+- DOMAIN-SUFFIX,edgecastcdn.net,NessByte
+- DOMAIN-SUFFIX,edgekey.net,NessByte
+- DOMAIN-SUFFIX,edgesuite.net,NessByte
+- DOMAIN-SUFFIX,engadget.com,NessByte
+- DOMAIN-SUFFIX,entrust.net,NessByte
+- DOMAIN-SUFFIX,eurekavpt.com,NessByte
+- DOMAIN-SUFFIX,evernote.com,NessByte
+- DOMAIN-SUFFIX,fabric.io,NessByte
+- DOMAIN-SUFFIX,fast.com,NessByte
+- DOMAIN-SUFFIX,fastly.net,NessByte
+- DOMAIN-SUFFIX,fc2.com,NessByte
+- DOMAIN-SUFFIX,feedburner.com,NessByte
+- DOMAIN-SUFFIX,feedly.com,NessByte
+- DOMAIN-SUFFIX,feedsportal.com,NessByte
+- DOMAIN-SUFFIX,fiftythree.com,NessByte
+- DOMAIN-SUFFIX,firebaseio.com,NessByte
+- DOMAIN-SUFFIX,flexibits.com,NessByte
+- DOMAIN-SUFFIX,flickr.com,NessByte
+- DOMAIN-SUFFIX,flipboard.com,NessByte
+- DOMAIN-SUFFIX,g.co,NessByte
+- DOMAIN-SUFFIX,gabia.net,NessByte
+- DOMAIN-SUFFIX,geni.us,NessByte
+- DOMAIN-SUFFIX,gfx.ms,NessByte
+- DOMAIN-SUFFIX,ggpht.com,NessByte
+- DOMAIN-SUFFIX,ghostnoteapp.com,NessByte
+- DOMAIN-SUFFIX,git.io,NessByte
+- DOMAIN-KEYWORD,github,NessByte
+- DOMAIN-SUFFIX,globalsign.com,NessByte
+- DOMAIN-SUFFIX,gmodules.com,NessByte
+- DOMAIN-SUFFIX,godaddy.com,NessByte
+- DOMAIN-SUFFIX,golang.org,NessByte
+- DOMAIN-SUFFIX,gongm.in,NessByte
+- DOMAIN-SUFFIX,goo.gl,NessByte
+- DOMAIN-SUFFIX,goodreaders.com,NessByte
+- DOMAIN-SUFFIX,goodreads.com,NessByte
+- DOMAIN-SUFFIX,gravatar.com,NessByte
+- DOMAIN-SUFFIX,gstatic.com,NessByte
+- DOMAIN-SUFFIX,gvt0.com,NessByte
+- DOMAIN-SUFFIX,hockeyapp.net,NessByte
+- DOMAIN-SUFFIX,hotmail.com,NessByte
+- DOMAIN-SUFFIX,icons8.com,NessByte
+- DOMAIN-SUFFIX,ifixit.com,NessByte
+- DOMAIN-SUFFIX,ift.tt,NessByte
+- DOMAIN-SUFFIX,ifttt.com,NessByte
+- DOMAIN-SUFFIX,iherb.com,NessByte
+- DOMAIN-SUFFIX,imageshack.us,NessByte
+- DOMAIN-SUFFIX,img.ly,NessByte
+- DOMAIN-SUFFIX,imgur.com,NessByte
+- DOMAIN-SUFFIX,imore.com,NessByte
+- DOMAIN-SUFFIX,instapaper.com,NessByte
+- DOMAIN-SUFFIX,ipn.li,NessByte
+- DOMAIN-SUFFIX,is.gd,NessByte
+- DOMAIN-SUFFIX,issuu.com,NessByte
+- DOMAIN-SUFFIX,itgonglun.com,NessByte
+- DOMAIN-SUFFIX,itun.es,NessByte
+- DOMAIN-SUFFIX,ixquick.com,NessByte
+- DOMAIN-SUFFIX,j.mp,NessByte
+- DOMAIN-SUFFIX,js.revsci.net,NessByte
+- DOMAIN-SUFFIX,jshint.com,NessByte
+- DOMAIN-SUFFIX,jtvnw.net,NessByte
+- DOMAIN-SUFFIX,justgetflux.com,NessByte
+- DOMAIN-SUFFIX,kat.cr,NessByte
+- DOMAIN-SUFFIX,klip.me,NessByte
+- DOMAIN-SUFFIX,libsyn.com,NessByte
+- DOMAIN-SUFFIX,linkedin.com,NessByte
+- DOMAIN-SUFFIX,line-apps.com,NessByte
+- DOMAIN-SUFFIX,linode.com,NessByte
+- DOMAIN-SUFFIX,lithium.com,NessByte
+- DOMAIN-SUFFIX,littlehj.com,NessByte
+- DOMAIN-SUFFIX,live.com,NessByte
+- DOMAIN-SUFFIX,live.net,NessByte
+- DOMAIN-SUFFIX,livefilestore.com,NessByte
+- DOMAIN-SUFFIX,llnwd.net,NessByte
+- DOMAIN-SUFFIX,macid.co,NessByte
+- DOMAIN-SUFFIX,macromedia.com,NessByte
+- DOMAIN-SUFFIX,macrumors.com,NessByte
+- DOMAIN-SUFFIX,mashable.com,NessByte
+- DOMAIN-SUFFIX,mathjax.org,NessByte
+- DOMAIN-SUFFIX,medium.com,NessByte
+- DOMAIN-SUFFIX,mega.co.nz,NessByte
+- DOMAIN-SUFFIX,mega.nz,NessByte
+- DOMAIN-SUFFIX,megaupload.com,NessByte
+- DOMAIN-SUFFIX,microsofttranslator.com,NessByte
+- DOMAIN-SUFFIX,mindnode.com,NessByte
+- DOMAIN-SUFFIX,mobile01.com,NessByte
+- DOMAIN-SUFFIX,modmyi.com,NessByte
+- DOMAIN-SUFFIX,msedge.net,NessByte
+- DOMAIN-SUFFIX,myfontastic.com,NessByte
+- DOMAIN-SUFFIX,name.com,NessByte
+- DOMAIN-SUFFIX,nextmedia.com,NessByte
+- DOMAIN-SUFFIX,nsstatic.net,NessByte
+- DOMAIN-SUFFIX,nssurge.com,NessByte
+- DOMAIN-SUFFIX,nyt.com,NessByte
+- DOMAIN-SUFFIX,nytimes.com,NessByte
+- DOMAIN-SUFFIX,omnigroup.com,NessByte
+- DOMAIN-SUFFIX,onedrive.com,NessByte
+- DOMAIN-SUFFIX,onenote.com,NessByte
+- DOMAIN-SUFFIX,ooyala.com,NessByte
+- DOMAIN-SUFFIX,openvpn.net,NessByte
+- DOMAIN-SUFFIX,openwrt.org,NessByte
+- DOMAIN-SUFFIX,orkut.com,NessByte
+- DOMAIN-SUFFIX,osxdaily.com,NessByte
+- DOMAIN-SUFFIX,outlook.com,NessByte
+- DOMAIN-SUFFIX,ow.ly,NessByte
+- DOMAIN-SUFFIX,paddleapi.com,NessByte
+- DOMAIN-SUFFIX,parallels.com,NessByte
+- DOMAIN-SUFFIX,parse.com,NessByte
+- DOMAIN-SUFFIX,pdfexpert.com,NessByte
+- DOMAIN-SUFFIX,periscope.tv,NessByte
+- DOMAIN-SUFFIX,pinboard.in,NessByte
+- DOMAIN-SUFFIX,pinterest.com,NessByte
+- DOMAIN-SUFFIX,pixelmator.com,NessByte
+- DOMAIN-SUFFIX,pixiv.net,NessByte
+- DOMAIN-SUFFIX,playpcesor.com,NessByte
+- DOMAIN-SUFFIX,playstation.com,NessByte
+- DOMAIN-SUFFIX,playstation.com.hk,NessByte
+- DOMAIN-SUFFIX,playstation.net,NessByte
+- DOMAIN-SUFFIX,playstationnetwork.com,NessByte
+- DOMAIN-SUFFIX,pushwoosh.com,NessByte
+- DOMAIN-SUFFIX,rime.im,NessByte
+- DOMAIN-SUFFIX,servebom.com,NessByte
+- DOMAIN-SUFFIX,sfx.ms,NessByte
+- DOMAIN-SUFFIX,shadowsocks.org,NessByte
+- DOMAIN-SUFFIX,sharethis.com,NessByte
+- DOMAIN-SUFFIX,shazam.com,NessByte
+- DOMAIN-SUFFIX,skype.com,NessByte
+- DOMAIN-SUFFIX,smartdnsNessByte.com,NessByte
+- DOMAIN-SUFFIX,smartmailcloud.com,NessByte
+- DOMAIN-SUFFIX,sndcdn.com,NessByte
+- DOMAIN-SUFFIX,sony.com,NessByte
+- DOMAIN-SUFFIX,soundcloud.com,NessByte
+- DOMAIN-SUFFIX,sourceforge.net,NessByte
+- DOMAIN-SUFFIX,spotify.com,NessByte
+- DOMAIN-SUFFIX,squarespace.com,NessByte
+- DOMAIN-SUFFIX,sstatic.net,NessByte
+- DOMAIN-SUFFIX,st.luluku.pw,NessByte
+- DOMAIN-SUFFIX,stackoverflow.com,NessByte
+- DOMAIN-SUFFIX,startpage.com,NessByte
+- DOMAIN-SUFFIX,staticflickr.com,NessByte
+- DOMAIN-SUFFIX,steamcommunity.com,NessByte
+- DOMAIN-SUFFIX,symauth.com,NessByte
+- DOMAIN-SUFFIX,symcb.com,NessByte
+- DOMAIN-SUFFIX,symcd.com,NessByte
+- DOMAIN-SUFFIX,tapbots.com,NessByte
+- DOMAIN-SUFFIX,tapbots.net,NessByte
+- DOMAIN-SUFFIX,tdesktop.com,NessByte
+- DOMAIN-SUFFIX,techcrunch.com,NessByte
+- DOMAIN-SUFFIX,techsmith.com,NessByte
+- DOMAIN-SUFFIX,thepiratebay.org,NessByte
+- DOMAIN-SUFFIX,theverge.com,NessByte
+- DOMAIN-SUFFIX,time.com,NessByte
+- DOMAIN-SUFFIX,timeinc.net,NessByte
+- DOMAIN-SUFFIX,tiny.cc,NessByte
+- DOMAIN-SUFFIX,tinypic.com,NessByte
+- DOMAIN-SUFFIX,tmblr.co,NessByte
+- DOMAIN-SUFFIX,todoist.com,NessByte
+- DOMAIN-SUFFIX,trello.com,NessByte
+- DOMAIN-SUFFIX,trustasiassl.com,NessByte
+- DOMAIN-SUFFIX,tumblr.co,NessByte
+- DOMAIN-SUFFIX,tumblr.com,NessByte
+- DOMAIN-SUFFIX,tweetdeck.com,NessByte
+- DOMAIN-SUFFIX,tweetmarker.net,NessByte
+- DOMAIN-SUFFIX,twitch.tv,NessByte
+- DOMAIN-SUFFIX,txmblr.com,NessByte
+- DOMAIN-SUFFIX,typekit.net,NessByte
+- DOMAIN-SUFFIX,ubertags.com,NessByte
+- DOMAIN-SUFFIX,ublock.org,NessByte
+- DOMAIN-SUFFIX,ubnt.com,NessByte
+- DOMAIN-SUFFIX,ulyssesapp.com,NessByte
+- DOMAIN-SUFFIX,urchin.com,NessByte
+- DOMAIN-SUFFIX,usertrust.com,NessByte
+- DOMAIN-SUFFIX,v.gd,NessByte
+- DOMAIN-SUFFIX,v2ex.com,NessByte
+- DOMAIN-SUFFIX,vimeo.com,NessByte
+- DOMAIN-SUFFIX,vimeocdn.com,NessByte
+- DOMAIN-SUFFIX,vine.co,NessByte
+- DOMAIN-SUFFIX,vivaldi.com,NessByte
+- DOMAIN-SUFFIX,vox-cdn.com,NessByte
+- DOMAIN-SUFFIX,vsco.co,NessByte
+- DOMAIN-SUFFIX,vultr.com,NessByte
+- DOMAIN-SUFFIX,w.org,NessByte
+- DOMAIN-SUFFIX,w3schools.com,NessByte
+- DOMAIN-SUFFIX,webtype.com,NessByte
+- DOMAIN-SUFFIX,wikiwand.com,NessByte
+- DOMAIN-SUFFIX,wikileaks.org,NessByte
+- DOMAIN-SUFFIX,wikimedia.org,NessByte
+- DOMAIN-SUFFIX,wikipedia.com,NessByte
+- DOMAIN-SUFFIX,wikipedia.org,NessByte
+- DOMAIN-SUFFIX,windows.com,NessByte
+- DOMAIN-SUFFIX,windows.net,NessByte
+- DOMAIN-SUFFIX,wire.com,NessByte
+- DOMAIN-SUFFIX,wordpress.com,NessByte
+- DOMAIN-SUFFIX,workflowy.com,NessByte
+- DOMAIN-SUFFIX,wp.com,NessByte
+- DOMAIN-SUFFIX,wsj.com,NessByte
+- DOMAIN-SUFFIX,wsj.net,NessByte
+- DOMAIN-SUFFIX,xda-developers.com,NessByte
+- DOMAIN-SUFFIX,xeeno.com,NessByte
+- DOMAIN-SUFFIX,xiti.com,NessByte
+- DOMAIN-SUFFIX,yahoo.com,NessByte
+- DOMAIN-SUFFIX,yimg.com,NessByte
+- DOMAIN-SUFFIX,ying.com,NessByte
+- DOMAIN-SUFFIX,yoyo.org,NessByte
+- DOMAIN-SUFFIX,ytimg.com,NessByte
+- DOMAIN-SUFFIX,telegra.ph,NessByte
+- DOMAIN-SUFFIX,telegram.org,NessByte
+- IP-CIDR,91.108.4.0/22,NessByte,no-resolve
+- IP-CIDR,91.108.8.0/21,NessByte,no-resolve
+- IP-CIDR,91.108.16.0/22,NessByte,no-resolve
+- IP-CIDR,91.108.56.0/22,NessByte,no-resolve
+- IP-CIDR,149.154.160.0/20,NessByte,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,NessByte,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,NessByte,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,NessByte,no-resolve
+- IP-CIDR,120.232.181.162/32,NessByte,no-resolve
+- IP-CIDR,120.241.147.226/32,NessByte,no-resolve
+- IP-CIDR,120.253.253.226/32,NessByte,no-resolve
+- IP-CIDR,120.253.255.162/32,NessByte,no-resolve
+- IP-CIDR,120.253.255.34/32,NessByte,no-resolve
+- IP-CIDR,120.253.255.98/32,NessByte,no-resolve
+- IP-CIDR,180.163.150.162/32,NessByte,no-resolve
+- IP-CIDR,180.163.150.34/32,NessByte,no-resolve
+- IP-CIDR,180.163.151.162/32,NessByte,no-resolve
+- IP-CIDR,180.163.151.34/32,NessByte,no-resolve
+- IP-CIDR,203.208.39.0/24,NessByte,no-resolve
+- IP-CIDR,203.208.40.0/24,NessByte,no-resolve
+- IP-CIDR,203.208.41.0/24,NessByte,no-resolve
+- IP-CIDR,203.208.43.0/24,NessByte,no-resolve
+- IP-CIDR,203.208.50.0/24,NessByte,no-resolve
+- IP-CIDR,220.181.174.162/32,NessByte,no-resolve
+- IP-CIDR,220.181.174.226/32,NessByte,no-resolve
+- IP-CIDR,220.181.174.34/32,NessByte,no-resolve
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-KEYWORD,-cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,NessByte
