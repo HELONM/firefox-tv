@@ -4,7 +4,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: phoenix-1, server: u02.h7ys.top, port: 59489, type: trojan, password: bFIoZjguEO, skip-cert-verify: true}
+  - {name: phoenix-1, server: u02.hys.top, port: 59489, type: trojan, password: bFIoZjguEO, skip-cert-verify: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
